@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Features from '../components/Features';
+import InvestorSection from '../components/InvestorSection';
+import Metrics from '../components/Metrics';
+import Team from '../components/Team';
+import Footer from '../components/Footer';
+---
+
+<Layout title="AstroLMS - Revolutionary Learning Management System">
+  <div class="min-h-screen bg-tech-gradient relative overflow-hidden">
+    <Header client:load />
+    <Hero client:load />
+    <Features client:load />
+    <InvestorSection client:load />
+    <Metrics client:load />
+    <Team client:load />
+    <Footer client:load />
+  </div>
+</Layout>
