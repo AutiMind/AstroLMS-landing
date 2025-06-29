@@ -183,7 +183,7 @@ const Footer = () => {
           <div className="border-t border-gray-800 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2025 AutiMind, Inc. DBA AstroLMS. All rights reserved.
+                © 2025 AutiMind, Inc. All rights reserved.
               </div>
               
               {/* Social Links */}
@@ -191,7 +191,7 @@ const Footer = () => {
                 {[
                   { icon: Linkedin, href: '#', label: 'LinkedIn' },
                   { icon: X, href: '#', label: 'X (Twitter)' },
-                  { icon: GitBranch, href: '#', label: 'GitHub' }
+                  { icon: GitBranch, href: 'https://github.com/cozyartz/AstroLMS', label: 'GitHub' }
                 ].map((social) => (
                   <motion.a
                     key={social.label}
