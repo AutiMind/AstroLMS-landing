@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Target, Globe2, DollarSign } from 'lucide-react';
+import { TrendingUp, Brain, Coins, DollarSign } from 'lucide-react';
 import ContactForm from './ContactForm';
 
 const InvestorSection = () => {
@@ -10,26 +10,26 @@ const InvestorSection = () => {
     {
       icon: TrendingUp,
       title: '$350B Market Size',
-      description: 'Global LMS market growing at 19.6% CAGR',
-      stat: '2024-2030'
+      description: 'Global LMS market growing at 19.6% CAGR with AI education reaching $32B by 2032',
+      stat: '17% AI Growth'
     },
     {
-      icon: Target,
-      title: 'AI-First Approach',
-      description: 'Next-generation LMS with built-in AI capabilities',
-      stat: 'First Mover'
+      icon: Brain,
+      title: 'AI Premium Valuation',
+      description: 'AI companies receive 60% higher valuations than traditional SaaS platforms',
+      stat: '60% Premium'
     },
     {
-      icon: Globe2,
-      title: 'Scalable SaaS',
-      description: 'Cloud-native architecture for global deployment',
-      stat: 'Unlimited Scale'
+      icon: Coins,
+      title: 'Peak AI Investment',
+      description: '42% of US VC funding ($80.7B) went to AI startups in 2024',
+      stat: '$80.7B Funding'
     },
     {
       icon: DollarSign,
-      title: 'Revenue Potential',
-      description: 'Projected $100M ARR by year 4',
-      stat: '400% Growth'
+      title: 'Perfect Market Timing',
+      description: 'Series A average $12M in 2024, with AI EdTech companies raising $15M+',
+      stat: '$15M+ Rounds'
     }
   ];
 
@@ -66,8 +66,9 @@ const InvestorSection = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join us in revolutionizing education technology and capturing a massive, 
-              rapidly growing market with exponential potential.
+              Join us in capitalizing on the $80.7B AI investment surge. AstroLMS combines 
+              AI-first learning with perfect market timing—positioned to capture the 
+              $350B LMS market during peak AI adoption and funding cycle.
             </p>
           </motion.div>
 
@@ -83,13 +84,13 @@ const InvestorSection = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="group"
               >
-                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 text-center hover:border-blue-500 transition-all duration-300">
+                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 text-center hover:border-blue-500 transition-all duration-300 h-full min-h-[280px] flex flex-col">
                   <div className="inline-flex p-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                     <opportunity.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{opportunity.title}</h3>
-                  <p className="text-gray-400 mb-3">{opportunity.description}</p>
-                  <div className="text-blue-400 font-semibold text-lg">{opportunity.stat}</div>
+                  <p className="text-gray-400 mb-3 flex-grow">{opportunity.description}</p>
+                  <div className="text-blue-400 font-semibold text-lg mt-auto">{opportunity.stat}</div>
                 </div>
               </motion.div>
             ))}
@@ -106,15 +107,16 @@ const InvestorSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-white mb-6">
-                  Why Invest in AstroLMS?
+                  Why AstroLMS is the Future of EdTech?
                 </h3>
                 <div className="space-y-4">
                   {[
-                    'AI-first approach to learning management systems',
-                    'Experienced team with proven EdTech track record',
-                    'Scalable SaaS model with high retention potential',
-                    'Clear competitive advantage in emerging market',
-                    'Path to profitability within 24 months'
+                    'Market Timing: 42% of US VC funding ($80.7B) flowing to AI startups',
+                    'AI Premium: 60% higher valuations than traditional SaaS companies',
+                    'Series A Benchmark: Average $12M rounds, AI EdTech raising $15M+',
+                    'Massive TAM: $350B LMS market + $32B AI education by 2032',
+                    'Experienced team with proven track record and deep market knowledge',
+                    'First-mover advantage in AI-native LMS during peak investment cycle'
                   ].map((point, index) => (
                     <motion.div
                       key={index}
@@ -133,8 +135,9 @@ const InvestorSection = () => {
               
               <div className="text-center lg:text-right">
                 <div className="mb-8">
-                  <div className="text-5xl font-bold text-white mb-2">$5M</div>
-                  <div className="text-blue-400 text-xl">Series A Target</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">$12-18M</div>
+                  <div className="text-blue-400 text-xl font-semibold">Series A Target</div>
+                  <div className="text-gray-400 text-sm mt-2">Based on AI premium valuations<br/>& current market benchmarks</div>
                 </div>
                 <motion.button
                   onClick={() => setIsContactFormOpen(true)}

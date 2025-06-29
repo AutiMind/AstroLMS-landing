@@ -97,7 +97,7 @@ const Features = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="group relative"
             >
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 h-full hover:border-gray-500 transition-all duration-300">
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 h-full min-h-[280px] flex flex-col hover:border-gray-500 transition-all duration-300">
                 {/* Icon */}
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="h-6 w-6 text-white" />
@@ -107,7 +107,7 @@ const Features = () => {
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300 flex-grow">
                   {feature.description}
                 </p>
 

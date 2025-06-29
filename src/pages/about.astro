@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Timeline from '../components/Timeline';
+import TechShowcase from '../components/TechShowcase';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="About Us - AstroLMS">
+  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-blue-600/20 rounded-full blur-xl animate-float"></div>
+      <div class="absolute top-40 right-20 w-48 h-48 bg-purple-600/20 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-32 left-20 w-40 h-40 bg-blue-400/20 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <Header client:load />
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Our
+            <span class="block bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-pulse-slow">
+              Story
+            </span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            From AutiMind to AstroLMS - pioneering the future of digital learning through 
+            innovation, technology, and unwavering commitment to educational excellence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <div class="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
+              <h2 class="text-4xl font-bold text-white mb-6">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  AutiMind, Inc.
+                </span>
+              </h2>
+              <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Founded in 2023 as an edtech company with a mission to transform digital learning. 
+                We began with a vision to create accessible, innovative educational technology 
+                that could adapt to the diverse needs of learners worldwide.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed">
+                Today, we are reactivating our vision under the DBA AstroLMS, shifting our focus 
+                to deliver a next-generation learning management system that harnesses AI, Web3, 
+                and modular cloud technologies.
+              </p>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl p-8 backdrop-blur-sm border border-gray-700">
+              <div class="text-center">
+                <div class="mb-8">
+                  <div class="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-4 animate-pulse">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                  To empower organizations and educators with flexible, future-ready tools 
+                  for engaging, secure, and data-driven learning experiences.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-twinkle"></div>
+            <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-twinkle" style="animation-delay: 1s;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
+            Our
+            <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Vision
+            </span>
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 h-full hover:border-blue-500 transition-all duration-300 group">
+              <div class="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">Innovation First</h3>
+              <p class="text-gray-300">
+                Leveraging cutting-edge AI and Web3 technologies to create learning experiences 
+                that adapt and evolve with each learner.
+              </p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 h-full hover:border-purple-500 transition-all duration-300 group">
+              <div class="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">Community Driven</h3>
+              <p class="text-gray-300">
+                Building platforms that foster collaboration, connection, and shared learning 
+                experiences across diverse educational communities.
+              </p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 h-full hover:border-blue-500 transition-all duration-300 group">
+              <div class="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">Security & Trust</h3>
+              <p class="text-gray-300">
+                Ensuring data privacy, security, and ethical AI practices while maintaining 
+                the highest standards of educational integrity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <Timeline client:load />
+
+    <!-- Technology Showcase Section -->
+    <TechShowcase client:load />
+
+    <Footer client:load />
+    
+    <Toaster 
+      position="top-right"
+      toastOptions={{
+        duration: 4000,
+        style: {
+          background: '#1f2937',
+          color: '#f9fafb',
+          border: '1px solid #374151',
+        },
+      }}
+      client:load
+    />
+  </div>
+</Layout>

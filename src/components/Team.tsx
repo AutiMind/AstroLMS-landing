@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, X, Mail, GitHub } from 'lucide-react';
+import { Linkedin, X, Mail, Github } from 'lucide-react';
 
 const Team = () => {
   const teamMembers = [
@@ -64,7 +64,7 @@ const Team = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="group"
             >
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 text-center">
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 text-center h-full min-h-[600px] flex flex-col">
                 {/* Profile Image */}
                 <div className="relative mb-6">
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-600 group-hover:border-blue-500 transition-colors duration-300">
@@ -78,12 +78,12 @@ const Team = () => {
                 </div>
 
                 {/* Member Info */}
-                <div className="mb-6">
+                <div className="mb-6 flex-grow flex flex-col">
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="text-blue-400 font-medium mb-4 text-lg">{member.role}</p>
-                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300 text-left">
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300 text-left flex-grow">
                     {member.bio}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ const Team = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GitHub className="h-5 w-5 text-gray-400 hover:text-white" />
+                    <Github className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
                     href={member.social.twitter}

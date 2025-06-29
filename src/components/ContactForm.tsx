@@ -21,13 +21,41 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      toast.success('Thank you! We\'ll be in touch soon.');
-      setFormData({ name: '', email: '', company: '', message: '' });
+    try {
+      // Create email content for both founders
+      const emailSubject = `New Contact Form Submission from ${formData.name}`;
+      const emailBody = `
+New contact form submission from AstroLMS website:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+
+Message:
+${formData.message}
+      `.trim();
+
+      // Create mailto links for both Amy and Andrea
+      const amyEmail = 'amy@autimind.com';
+      const andreaEmail = 'andrea@autimind.com';
+      
+      // Create a combined mailto link with both recipients
+      const mailtoLink = `mailto:${amyEmail},${andreaEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open the user's default email client
+      window.location.href = mailtoLink;
+      
+      setTimeout(() => {
+        toast.success('Email client opened! Your message has been prepared for both Amy and Andrea.');
+        setFormData({ name: '', email: '', company: '', message: '' });
+        setIsSubmitting(false);
+        onClose();
+      }, 1000);
+
+    } catch (error) {
+      toast.error('Something went wrong. Please try again or contact us directly.');
       setIsSubmitting(false);
-      onClose();
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -164,7 +192,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
         </form>
 
         <p className="text-xs text-gray-400 mt-4 text-center">
-          We'll get back to you within 24 hours.
+          Your message will be sent to both Amy and Andrea. We'll get back to you within 24 hours.
         </p>
       </motion.div>
     </div>

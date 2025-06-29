@@ -5,30 +5,30 @@ const Metrics = () => {
   const metrics = [
     {
       icon: Users,
-      value: '10M+',
-      label: 'Target Market',
-      description: 'Students and educators worldwide',
+      value: '$80.7B',
+      label: 'AI VC Funding',
+      description: '42% of US venture capital in 2024',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: BookOpen,
-      value: '85%',
-      label: 'Market Gap',
-      description: 'LMS platforms lacking AI integration',
+      value: '60%',
+      label: 'AI Premium',
+      description: 'Higher valuations vs traditional SaaS',
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: Award,
-      value: '19.6%',
-      label: 'Market Growth',
-      description: 'Annual growth rate (CAGR)',
+      value: '$32B',
+      label: 'AI Education',
+      description: 'Market size by 2032 (17% CAGR)',
       color: 'from-pink-500 to-pink-600'
     },
     {
       icon: Rocket,
-      value: '$350B',
-      label: 'Market Size',
-      description: 'Global LMS market by 2030',
+      value: '$15M+',
+      label: 'Series A Range',
+      description: 'AI EdTech funding benchmarks',
       color: 'from-blue-500 to-purple-500'
     }
   ];
@@ -51,8 +51,8 @@ const Metrics = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The learning management system market is experiencing unprecedented growth, 
-            creating massive opportunities for innovative solutions.
+            AI companies are commanding premium valuations during the largest AI investment 
+            cycle in history—positioning AstroLMS for optimal funding conditions.
           </p>
         </motion.div>
 
@@ -100,16 +100,16 @@ const Metrics = () => {
           <div className="bg-gradient-to-r from-gray-900/80 to-blue-900/80 backdrop-blur-sm border border-gray-700 rounded-3xl p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <div className="text-3xl font-bold text-white mb-2">Fall 2025</div>
-                <div className="text-gray-400">Expected Beta Launch</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">$12M</div>
+                <div className="text-gray-400">Series A Average 2024</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white mb-2">AI-First</div>
-                <div className="text-gray-400">Market Positioning</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">Q4 2025</div>
+                <div className="text-gray-400">Beta Launch Timeline</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white mb-2">Global</div>
-                <div className="text-gray-400">Market Reach</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent mb-2">$350B</div>
+                <div className="text-gray-400">Total LMS Market</div>
               </div>
             </div>
           </div>
