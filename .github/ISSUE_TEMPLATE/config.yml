@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Questions & Support
+    url: mailto:hello@astrolms.com
+    about: For general questions about AstroLMS or technical support
+  - name: 🔒 Security Issues
+    url: mailto:hello@astrolms.com
+    about: Please report security vulnerabilities via email
+  - name: 📞 Business Inquiries
+    url: mailto:hello@astrolms.com
+    about: For investment, partnership, or business development inquiries

@@ -1,0 +1,117 @@
+name: 📝 Content Update
+description: Request updates to content, copy, or information on the landing page
+title: "[CONTENT] "
+labels: ["content", "documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our content! Please provide details about the content changes you'd like to see.
+  
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Section
+      description: Which section of the site needs updating?
+      options:
+        - Hero Section
+        - Features Section
+        - Team Section
+        - Investor Section
+        - About Page
+        - Blog Content
+        - Footer
+        - Meta Information (SEO)
+        - Error Pages
+        - Other
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Update Type
+      description: What type of content update is needed?
+      options:
+        - Text/Copy Changes
+        - Image Updates
+        - Information Updates
+        - New Content Addition
+        - Content Removal
+        - Translation/Localization
+        - SEO Optimization
+    validations:
+      required: true
+  
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What is the current content that needs to be changed?
+      placeholder: Copy and paste the current text/content or describe what currently exists...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: proposed-content
+    attributes:
+      label: Proposed Content
+      description: What should the new content be?
+      placeholder: Provide the new text/content or describe what should be added...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning
+      description: Why is this content change needed?
+      placeholder: |
+        - Outdated information
+        - Improved clarity
+        - Better SEO
+        - Brand consistency
+        - User feedback
+        - Other reasons...
+    validations:
+      required: true
+  
+  - type: input
+    id: page-url
+    attributes:
+      label: Page/Section URL
+      description: Link to the specific page or section that needs updating
+      placeholder: "https://astrolms.pages.dev/..."
+  
+  - type: textarea
+    id: assets
+    attributes:
+      label: Related Assets
+      description: Any images, files, or other assets related to this content update
+      placeholder: Drag and drop files here or provide URLs...
+  
+  - type: checkboxes
+    id: review-required
+    attributes:
+      label: Review Requirements
+      description: What kind of review does this content need?
+      options:
+        - label: Technical accuracy review
+        - label: Legal/compliance review
+        - label: Brand/marketing review
+        - label: Accessibility review
+        - label: SEO review
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have identified the specific location of the content
+          required: true
+        - label: I have provided clear before/after content
+          required: true
+        - label: I have explained why this change is needed
+          required: true

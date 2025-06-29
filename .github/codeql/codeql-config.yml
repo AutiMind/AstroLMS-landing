@@ -1,0 +1,19 @@
+name: "AstroLMS Landing CodeQL Config"
+
+disable-default-queries: false
+
+queries:
+  - uses: security-and-quality
+  - uses: security-extended
+
+paths-ignore:
+  - node_modules
+  - dist
+  - .astro
+  - "**/*.min.js"
+  - "**/*.bundle.js"
+
+paths:
+  - src
+  - astro.config.mjs
+  - tailwind.config.mjs

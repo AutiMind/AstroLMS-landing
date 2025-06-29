@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import BlogPost from '../../components/BlogPost';
+import { Toaster } from 'react-hot-toast';
+
+const post = {
+  title: "Welcome to AstroLMS: Where Learning Meets Innovation",
+  author: "Amy Cozart-Lundin",
+  date: "2024-12-29",
+  readTime: "5 min read",
+  category: "Company News",
+  content: `
+    <p class="lead">Welcome to the future of learning management systems. Today marks the beginning of a revolutionary journey that will transform how we think about education, engagement, and the limitless potential of AI-powered learning.</p>
+
+    <h2>The Vision Behind AstroLMS</h2>
+    <p>At AstroLMS, we believe that learning should be as unique as each individual learner. Traditional learning management systems have served their purpose, but they've reached their limits in addressing the diverse, dynamic needs of modern education. That's why we're building something fundamentally different—an AI-first platform that doesn't just manage content, but actively enhances the learning experience.</p>
+
+    <h2>What Makes AstroLMS Revolutionary?</h2>
+    
+    <h3>🤖 AI-Powered Personalization</h3>
+    <p>Our advanced AI engine learns from every interaction, adapting content delivery, pacing, and methodology to match each learner's unique style. Whether you're a visual learner who thrives on diagrams and videos, or a kinesthetic learner who needs hands-on experiences, AstroLMS creates a personalized pathway just for you.</p>
+
+    <h3>🎯 Intelligent Content Curation</h3>
+    <p>Gone are the days of one-size-fits-all curricula. Our AI analyzes learning patterns, identifies knowledge gaps, and dynamically curates content from our vast library of resources. It's like having a personal tutor who knows exactly what you need, when you need it.</p>
+
+    <h3>📊 Real-Time Learning Analytics</h3>
+    <p>Understanding how learning happens is crucial for improvement. AstroLMS provides unprecedented insights into the learning process, offering educators real-time analytics that reveal not just what students are learning, but how they're learning it.</p>
+
+    <h3>🌐 Collaborative Learning Ecosystems</h3>
+    <p>Learning is inherently social. Our platform fosters meaningful connections between learners, creating dynamic study groups, peer mentoring opportunities, and collaborative project spaces that make learning engaging and interactive.</p>
+
+    <h2>The Market Opportunity</h2>
+    <p>The global LMS market is experiencing unprecedented growth, projected to reach $350 billion by 2025 with a compound annual growth rate of 19.6%. This growth is driven by digital transformation in education, remote learning adoption, and the increasing demand for personalized learning experiences.</p>
+
+    <p>However, current solutions fall short of meeting the sophisticated needs of modern learners and educators. Most existing platforms are built on outdated architectures that treat AI as an afterthought rather than a foundational element. AstroLMS is built AI-first from the ground up.</p>
+
+    <h2>Our Commitment to Excellence</h2>
+    <p>As we prepare for our beta launch in Q4 2025, we're committed to delivering not just a product, but a transformative experience. Every feature we develop, every algorithm we train, and every interface we design is guided by one principle: empowering learners to achieve their full potential.</p>
+
+    <h2>Join Us on This Journey</h2>
+    <p>Whether you're an educator looking to revolutionize your teaching methods, a student seeking a more engaging learning experience, or an investor interested in the future of education technology, we invite you to be part of the AstroLMS story.</p>
+
+    <p>The future of learning is here, and it's more exciting than we ever imagined. Welcome to AstroLMS—where learning meets innovation, and possibilities become realities.</p>
+
+    <div class="cta-section">
+      <p><strong>Ready to be part of the future?</strong> <a href="/#contact" class="text-blue-400 hover:text-blue-300 underline">Get in touch with us</a> to learn more about beta access, partnership opportunities, or investment details.</p>
+    </div>
+  `
+};
+---
+
+<Layout title={`${post.title} - AstroLMS Blog`}>
+  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute top-1/2 -left-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute -bottom-40 right-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    </div>
+    
+    <!-- Animated particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-twinkle"></div>
+      <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-twinkle" style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-twinkle" style="animation-delay: 2s;"></div>
+      <div class="absolute top-2/3 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-twinkle" style="animation-delay: 3s;"></div>
+    </div>
+
+    <Header client:load />
+    <BlogPost post={post} client:load />
+    <Footer client:load />
+    
+    <Toaster 
+      position="top-right"
+      toastOptions={{
+        duration: 4000,
+        style: {
+          background: '#1f2937',
+          color: '#f9fafb',
+          border: '1px solid #374151',
+        },
+      }}
+      client:load
+    />
+  </div>
+</Layout>
