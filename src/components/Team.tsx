@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, X, Mail, GitHub } from 'lucide-react';
 
 const Team = () => {
   const teamMembers = [
@@ -10,9 +9,10 @@ const Team = () => {
       bio: 'Amy is an accomplished instructional designer and learning strategist with over a decade of experience in corporate learning and development. She specializes in building engaging, compliance-driven training programs and brings a strong background in digital course design, educational technology, and learner experience optimization.',
       image: '/C3FE986E-EA23-4996-A5D2-8CEEF3C2C4FB_4_5005_c.jpeg',
       social: {
-        linkedin: '#',
+        linkedin: 'https://www.linkedin.com/in/amycozartlundin/',
         twitter: '#',
-        email: 'amy@astrolms.com'
+        email: 'amy@autimind.com',
+        github: 'https://github.com/grammar-nerd'
       }
     },
     {
@@ -21,9 +21,10 @@ const Team = () => {
       bio: 'Andrea is a full-stack web developer with expertise in modern frameworks like Next.js and deep experience in building scalable SaaS platforms. She is passionate about leveraging emerging technologies, including Web3 and AI, to create innovative, user-centric digital solutions for education and beyond.',
       image: '/EDC62A9B-0B28-4CA3-9EF0-002FEF14DEC0_1_105_c.jpeg',
       social: {
-        linkedin: '#',
+        linkedin: 'https://www.linkedin.com/in/andrea-cozart-lundin/',
         twitter: '#',
-        email: 'andrea@astrolms.com'
+        email: 'andrea@autimind.com',
+        github: 'https://github.com/cozyartz'
       }
     }
   ];
@@ -94,8 +95,20 @@ const Team = () => {
                     className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors duration-200"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="h-5 w-5 text-gray-400 hover:text-white" />
+                  </motion.a>
+                  <motion.a
+                    href={member.social.github}
+                    className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors duration-200"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GitHub className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
                     href={member.social.twitter}
@@ -103,7 +116,7 @@ const Team = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Twitter className="h-5 w-5 text-gray-400 hover:text-white" />
+                    <X className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
                     href={`mailto:${member.social.email}`}

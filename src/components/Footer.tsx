@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, X, GitBranch } from 'lucide-react';
 import ContactForm from './ContactForm';
 import NewsletterModal from './NewsletterModal';
+
+interface FooterLink {
+  name: string;
+  href: string;
+  onClick?: () => void;
+}
 
 const Footer = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
-  const footerLinks = {
+  const footerLinks: Record<string, FooterLink[]> = {
     product: [
       { name: 'Features', href: '#features' },
       { name: 'Demo', href: '#demo' },
@@ -184,8 +190,8 @@ const Footer = () => {
               <div className="flex space-x-4">
                 {[
                   { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                  { icon: Twitter, href: '#', label: 'Twitter' },
-                  { icon: Github, href: '#', label: 'GitHub' }
+                  { icon: X, href: '#', label: 'X (Twitter)' },
+                  { icon: GitBranch, href: '#', label: 'GitHub' }
                 ].map((social) => (
                   <motion.a
                     key={social.label}

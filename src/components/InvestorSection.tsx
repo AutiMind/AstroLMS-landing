@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, Globe2, DollarSign } from 'lucide-react';
 import ContactForm from './ContactForm';
