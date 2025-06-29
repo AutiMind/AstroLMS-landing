@@ -1,0 +1,77 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer hexagonal crystal -->
+  <path
+    d="M24 2 L36 10 L36 26 L24 34 L12 26 L12 10 Z"
+    fill="url(#crystal-gradient)"
+    stroke="url(#border-gradient)"
+    stroke-width="1.5"
+  />
+  
+  <!-- Inner neural network pattern -->
+  <g opacity="0.9">
+    <!-- Central node -->
+    <circle cx="24" cy="18" r="2.5" fill="#ffffff" />
+    
+    <!-- Neural connections -->
+    <path
+      d="M24 18 L18 12 M24 18 L30 12 M24 18 L16 22 M24 18 L32 22 M24 18 L20 28 M24 18 L28 28"
+      stroke="#ffffff"
+      stroke-width="1"
+      opacity="0.6"
+    />
+    
+    <!-- Outer nodes -->
+    <circle cx="18" cy="12" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="30" cy="12" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="16" cy="22" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="32" cy="22" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="20" cy="28" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="28" cy="28" r="1.5" fill="#ffffff" opacity="0.8" />
+  </g>
+  
+  <!-- Subtle glow effect -->
+  <path
+    d="M24 2 L36 10 L36 26 L24 34 L12 26 L12 10 Z"
+    fill="none"
+    stroke="url(#glow-gradient)"
+    stroke-width="0.5"
+    opacity="0.6"
+  />
+  
+  <!-- Orbital ring -->
+  <circle
+    cx="24"
+    cy="18"
+    r="14"
+    fill="none"
+    stroke="url(#orbit-gradient)"
+    stroke-width="0.5"
+    opacity="0.4"
+    stroke-dasharray="2 4"
+  />
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="crystal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    
+    <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    
+    <linearGradient id="glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+    
+    <linearGradient id="orbit-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="1" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+</svg>

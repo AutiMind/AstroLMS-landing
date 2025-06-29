@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import ContactForm from './ContactForm';
+import Logo from './Logo';
 
 const Hero = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -50,18 +51,21 @@ const Hero = () => {
               <span className="text-sm text-gray-300">Revolutionary Learning Management System</span>
             </motion.div>
 
-            {/* Main Headline */}
-            <motion.h1
+            {/* Logo and Main Headline */}
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+              className="mb-6 flex flex-col items-center"
             >
-              AstroLMS
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <Logo size="large" showText={false} className="mb-8" />
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight">
+                AstroLMS
+              </h1>
+              <span className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Coming Soon
               </span>
-            </motion.h1>
+            </motion.div>
 
             {/* Subtitle */}
             <motion.p

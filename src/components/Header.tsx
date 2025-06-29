@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import ContactForm from './ContactForm';
 import NewsletterModal from './NewsletterModal';
+import Logo from './Logo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,15 +41,9 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <motion.div 
-              className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
             >
-              <img 
-                src="/AstroLMS-logo-transp.png" 
-                alt="AstroLMS" 
-                className="h-8 w-auto"
-              />
-              <span className="text-xl font-bold text-white">AstroLMS</span>
+              <Logo size="small" showText={true} />
             </motion.div>
 
             {/* Desktop Navigation */}
