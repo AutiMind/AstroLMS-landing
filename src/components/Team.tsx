@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, X, Mail, Github } from 'lucide-react';
+import { Linkedin, Globe, Mail, Github } from 'lucide-react';
 
 const Team = () => {
   const teamMembers = [
@@ -10,7 +10,7 @@ const Team = () => {
       image: '/C3FE986E-EA23-4996-A5D2-8CEEF3C2C4FB_4_5005_c.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/amycozartlundin/',
-        twitter: '#',
+        website: 'https://amylundin.me',
         email: 'amy@autimind.com',
         github: 'https://github.com/grammar-nerd'
       }
@@ -22,7 +22,7 @@ const Team = () => {
       image: '/EDC62A9B-0B28-4CA3-9EF0-002FEF14DEC0_1_105_c.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/andrea-cozart-lundin/',
-        twitter: '#',
+        website: 'https://andreacozart.me',
         email: 'andrea@autimind.com',
         github: 'https://github.com/cozyartz'
       }
@@ -111,12 +111,14 @@ const Team = () => {
                     <Github className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
-                    href={member.social.twitter}
+                    href={member.social.website}
                     className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors duration-200"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <X className="h-5 w-5 text-gray-400 hover:text-white" />
+                    <Globe className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
                     href={`mailto:${member.social.email}`}
