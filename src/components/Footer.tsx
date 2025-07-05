@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, X, GitBranch } from 'lucide-react';
 import ContactForm from './ContactForm';
 import NewsletterModal from './NewsletterModal';
+import Logo from './Logo';
 
 interface FooterLink {
   name: string;
@@ -67,13 +68,8 @@ const Footer = () => {
                   viewport={{ once: true }}
                 >
                   {/* Logo */}
-                  <div className="flex items-center space-x-3 mb-6">
-                    <img 
-                      src="/AstroLMS-logo-transp.png" 
-                      alt="AstroLMS" 
-                      className="h-8 w-auto"
-                    />
-                    <span className="text-2xl font-bold text-white">AstroLMS</span>
+                  <div className="mb-6">
+                    <Logo size="small" showText={true} />
                   </div>
 
                   <p className="text-gray-400 mb-6 leading-relaxed">
