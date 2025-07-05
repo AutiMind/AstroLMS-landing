@@ -10,21 +10,111 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Transform education with AstroLMS - the next-generation AI-powered learning management system designed for modern institutions and learners." />
-    <meta name="keywords" content="LMS, learning management system, AI education, EdTech, online learning, educational technology" />
+    <meta name="description" content="Transform education with AstroLMS - the next-generation AI-powered learning management system. Beta launching Q4 2025. Join the $350B EdTech revolution." />
+    <meta name="keywords" content="LMS, learning management system, AI education, EdTech, online learning, educational technology, AI-powered learning, SaaS education, modern LMS, next-generation learning" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-32x32.svg" />
     <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-    <meta property="og:title" content="AstroLMS - Revolutionary Learning Management System" />
-    <meta property="og:description" content="Transform education with AstroLMS - the next-generation AI-powered learning management system designed for modern institutions and learners." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://astrolms.com" />
+    <meta property="og:title" content="AstroLMS - Revolutionary AI-Powered Learning Management System" />
+    <meta property="og:description" content="Transform education with AstroLMS - the next-generation AI-powered learning management system. Beta launching Q4 2025. Join the $350B EdTech revolution." />
+    <meta property="og:image" content="https://astrolms.com/AstroLMS-logo-transp.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AstroLMS - AI-Powered Learning Management System" />
+    <meta property="og:site_name" content="AstroLMS" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://astrolms.com" />
+    <meta name="twitter:title" content="AstroLMS - Revolutionary AI-Powered Learning Management System" />
+    <meta name="twitter:description" content="Transform education with AstroLMS - the next-generation AI-powered learning management system. Beta launching Q4 2025. Join the $350B EdTech revolution." />
+    <meta name="twitter:image" content="https://astrolms.com/AstroLMS-logo-transp.png" />
+    <meta name="twitter:image:alt" content="AstroLMS - AI-Powered Learning Management System" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="AutiMind, Inc. DBA AstroLMS" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="msapplication-TileColor" content="#1e40af" />
+    <link rel="canonical" href="https://astrolms.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>{title}</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AstroLMS",
+        "legalName": "AutiMind, Inc. DBA AstroLMS",
+        "url": "https://astrolms.com",
+        "logo": "https://astrolms.com/AstroLMS-logo-transp.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-269-261-0069",
+          "contactType": "Customer Service",
+          "email": "hello@astrolms.com"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Battle Creek",
+          "addressRegion": "MI",
+          "postalCode": "49015",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://github.com/astrolms"
+        ],
+        "description": "Revolutionary AI-powered learning management system designed for modern institutions and learners.",
+        "foundingDate": "2024",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Amy Cozart-Lundin",
+            "jobTitle": "CEO"
+          },
+          {
+            "@type": "Person",
+            "name": "Andrea Cozart-Lundin",
+            "jobTitle": "CTO"
+          }
+        ]
+      }
+    </script>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AstroLMS",
+        "description": "Revolutionary AI-powered learning management system designed for modern institutions and learners.",
+        "url": "https://astrolms.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/ComingSoon"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AutiMind, Inc. DBA AstroLMS"
+        },
+        "datePublished": "2024",
+        "softwareVersion": "Beta",
+        "releaseNotes": "Beta launching Q4 2025"
+      }
+    </script>
   </head>
   <body class="font-sans antialiased">
     <slot />

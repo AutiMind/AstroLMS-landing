@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://astrolms.com/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1
+
+# Block access to admin/private areas if any exist in the future
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Allow: /sitemap.xml
