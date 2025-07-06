@@ -48,7 +48,7 @@ const Hero = () => {
               className="inline-flex items-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-full px-4 py-2 mb-8"
             >
               <Sparkles className="h-4 w-4 text-blue-400" />
-              <span className="text-sm text-gray-300">AI-enhanced learning</span>
+              <span className="text-sm text-gray-300">AI-Enhanced Learning</span>
             </motion.div>
 
             {/* Logo and Main Headline */}
