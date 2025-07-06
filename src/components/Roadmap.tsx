@@ -229,13 +229,14 @@ const Roadmap = () => {
               Be part of the revolution in educational technology. Connect with us to learn more about investment opportunities and partnerships.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+              <motion.a
+                href="https://pitch.astrolms.com/pitch-deck-astrolms"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 inline-block"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 View Pitch Deck
-              </motion.button>
+              </motion.a>
               <motion.button
                 className="border-2 border-blue-500 text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-500/10 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}

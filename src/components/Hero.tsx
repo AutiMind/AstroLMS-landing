@@ -86,7 +86,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12"
             >
               <a
-                href="https://pitch.astrolms.com"
+                href="https://pitch.astrolms.com/pitch-deck-astrolms"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 View Pitch Deck
