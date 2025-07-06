@@ -21,11 +21,21 @@ const Header = () => {
 
   const navItems = [
     { name: 'Features', href: '#features' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Pitch Deck', href: '/pitch-deck' },
     { name: 'Investors', href: '#investors' },
     { name: 'Team', href: '#team' },
     { name: 'About', href: '/about' },
   ];
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <>
@@ -53,6 +63,7 @@ const Header = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                   className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
@@ -93,7 +104,10 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      handleSmoothScroll(e, item.href);
+                      setIsMobileMenuOpen(false);
+                    }}
                   >
                     {item.name}
                   </a>
