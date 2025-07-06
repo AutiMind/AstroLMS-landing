@@ -117,10 +117,11 @@ AstroLMS delivers:
 - **Experience**: 15+ years in L&D and EdTech
 - **Vision**: Transforming education through AI innovation
 
-### Andrea Cozart-Lundin, CTO
-- **Background**: Software architecture and AI/ML
+### Andrea Cozart-Lundin, CTO & Lead Developer
+- **Background**: Full-stack software development and AI/ML
 - **Experience**: 12+ years in enterprise software
-- **Expertise**: Cloud-native platforms and AI integration
+- **Expertise**: Cloud-native platforms, AI integration, modern web technologies
+- **Current Role**: Leading all technical development across frontend, backend, and AI features
 
 ### Advisory Board
 - Industry experts in education, AI, and venture capital
@@ -138,18 +139,18 @@ AstroLMS delivers:
 - [x] Market research and competitive analysis
 - [x] Initial funding and investor relations
 
-### Phase 2: Platform Development (Q3 2024 - Q2 2025) 🔄
+### Phase 2: Platform Development (Q3 2024 - Q2 2025) ✅
 - [x] User authentication and management
 - [x] Course creation framework
-- [ ] AI learning analytics engine
-- [ ] Interactive content builder
-- [ ] Mobile-first responsive design
+- [x] AI learning analytics engine
+- [x] Interactive content builder
+- [x] Mobile-first responsive design
 
-### Phase 3: Beta Launch (Q3-Q4 2025) 📋
-- [ ] Beta user onboarding system
-- [ ] AI-powered personalization
-- [ ] Advanced analytics dashboard
-- [ ] LTI tool integrations
+### Phase 3: Beta Launch (Q3-Q4 2025) 🚧
+- [x] Beta user onboarding system
+- [x] AI-powered personalization
+- [x] Advanced analytics dashboard
+- [x] LTI tool integrations
 - [ ] Performance optimization
 
 ### Phase 4: Market Launch (Q1-Q2 2026) 🎯
@@ -176,11 +177,11 @@ AstroLMS delivers:
 - **Valuation**: Based on comparable EdTech companies
 - **Timeline**: Seeking to close by Q2 2025
 
-### Financial Projections
-- **Year 1**: $500K ARR (Beta customers)
-- **Year 2**: $2.5M ARR (Market launch)
-- **Year 3**: $12M ARR (Scale phase)
-- **Year 5**: $50M ARR (Market leadership)
+### Financial Projections (Updated July 2025)
+- **2025**: $1.2M ARR (Beta launch success)
+- **2026**: $4M ARR (Market expansion)
+- **2027**: $15M ARR (Scale phase)
+- **2028**: $35M ARR (Market leadership)
 
 ### Return Potential
 - **Market Size**: $350B TAM with 19.6% CAGR
@@ -192,12 +193,12 @@ AstroLMS delivers:
 ## 🛠️ Technical Architecture
 
 ### Technology Stack
-- **Frontend**: React 18, TypeScript, Tailwind CSS
-- **Backend**: Node.js, PostgreSQL, Redis
-- **AI/ML**: TensorFlow, PyTorch, OpenAI APIs
-- **Cloud**: AWS, Kubernetes, Docker
-- **Analytics**: Apache Kafka, ClickHouse
-- **Mobile**: React Native, Progressive Web App
+- **Frontend**: React 18, TypeScript, Tailwind CSS, Astro
+- **Backend**: Next.js 15, Cloudflare Workers, D1 Database
+- **AI/ML**: Claude SDK, Anthropic APIs, TensorFlow
+- **Cloud**: Cloudflare Pages, R2 Storage, KV Store
+- **Analytics**: Real-time dashboards, Vectorize search
+- **Mobile**: Progressive Web App, Responsive Design
 
 ### Performance & Scalability
 - **Load Time**: <1 second average page load

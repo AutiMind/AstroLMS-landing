@@ -19,7 +19,7 @@ We welcome contributions in several forms:
 - **Node.js** 18+ and npm
 - **Git** for version control
 - A **GitHub account**
-- Familiarity with **Astro**, **React**, and **TypeScript**
+- Familiarity with **Astro**, **React**, **TypeScript**, and **Tailwind CSS**
 
 ### Development Setup
 
@@ -238,9 +238,10 @@ Use the feature request template and include:
 
 AstroLMS Landing serves as:
 - **Marketing tool** for the AstroLMS platform
-- **Investor communication** hub
-- **Brand showcase** and credibility builder
-- **Lead generation** mechanism
+- **Investor communication** hub showcasing our progress and vision
+- **Brand showcase** and credibility builder for the AI-powered LMS
+- **Lead generation** mechanism for beta customers and partnerships
+- **Development progress** showcase with real implementation updates
 
 ### Target Audience
 
