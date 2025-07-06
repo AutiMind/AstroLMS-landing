@@ -61,3 +61,43 @@ coverage/
 Thumbs.db
 .AppleDouble
 .LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+
+# Firebase
+.firebase/
+
+# Cloudflare
+.dev.vars
+
+# Mac specific
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Node.js
+.npm
+.node_repl_history
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

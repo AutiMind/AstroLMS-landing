@@ -171,7 +171,7 @@ const WhitePaper = () => {
                   Read the Complete White Paper
                 </h3>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-                  Explore our comprehensive technical analysis of the future of learning management systems, 
+                  Download our comprehensive analysis of the future of learning management systems, 
                   including architecture, market analysis, and implementation roadmap.
                 </p>
 

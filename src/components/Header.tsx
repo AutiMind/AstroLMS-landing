@@ -55,7 +55,9 @@ const Header = () => {
             <motion.div 
               whileHover={{ scale: 1.05 }}
             >
-              <Logo size="small" showText={true} />
+              <a href="/" className="flex items-center">
+                <Logo size="small" showText={true} />
+              </a>
             </motion.div>
 
             {/* Desktop Navigation */}

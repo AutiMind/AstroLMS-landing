@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Lightbulb, Rocket, Target } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const Timeline = () => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const timelineEvents = [
     {
       year: '2023',
@@ -131,6 +134,7 @@ const Timeline = () => {
               Join us as we revolutionize education technology and create the future of learning management systems.
             </p>
             <motion.button
+              onClick={() => setIsContactFormOpen(true)}
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -140,6 +144,11 @@ const Timeline = () => {
           </div>
         </motion.div>
       </div>
+      
+      <ContactForm 
+        isOpen={isContactFormOpen} 
+        onClose={() => setIsContactFormOpen(false)} 
+      />
     </section>
   );
 };

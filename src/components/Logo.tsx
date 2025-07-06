@@ -136,7 +136,7 @@ export const Logo: React.FC<LogoProps> = ({
             AstroLMS
           </span>
           <span className="text-xs text-blue-200 opacity-80 -mt-1">
-            AI Enhanced Learning
+            AI-enhanced Learning
           </span>
         </div>
       )}

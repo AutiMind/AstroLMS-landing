@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   integrations: [
@@ -11,10 +10,8 @@ export default defineConfig({
     })
   ],
   output: 'static',
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    }
-  }),
+  image: {
+    service: { entrypoint: 'astro/assets/services/sharp' }
+  },
   site: 'https://astrolms.pages.dev'
 });

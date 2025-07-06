@@ -69,7 +69,9 @@ const Footer = () => {
                 >
                   {/* Logo */}
                   <div className="mb-6">
-                    <Logo size="small" showText={true} />
+                    <a href="/">
+                      <Logo size="small" showText={true} />
+                    </a>
                   </div>
 
                   <p className="text-gray-400 mb-6 leading-relaxed">
@@ -179,7 +181,7 @@ const Footer = () => {
           <div className="border-t border-gray-800 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2025 AutiMind, Inc. All rights reserved.
+                © 2025 AutiMind, Inc. AstroLMS. All rights reserved.
               </div>
               
               {/* Social Links */}
