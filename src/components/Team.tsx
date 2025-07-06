@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Globe, Mail, Github } from 'lucide-react';
+import { Linkedin, Globe, Mail, Code } from 'lucide-react';
 
 const Team = () => {
   const teamMembers = [
@@ -108,7 +108,7 @@ const Team = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="h-5 w-5 text-gray-400 hover:text-white" />
+                    <Code className="h-5 w-5 text-gray-400 hover:text-white" />
                   </motion.a>
                   <motion.a
                     href={member.social.website}
