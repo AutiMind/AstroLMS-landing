@@ -78,11 +78,32 @@ const Hero = () => {
               AI-powered personalization, immersive simulations, and real-time collaboration.
             </motion.p>
 
-            {/* Launch Timeline */}
+            {/* Call-to-Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12"
+            >
+              <a
+                href="/pitch-deck"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                View Pitch Deck
+              </a>
+              <button
+                onClick={() => setIsContactFormOpen(true)}
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+              >
+                Get Notified
+              </button>
+            </motion.div>
+
+            {/* Launch Timeline */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               className="text-center"
             >
               <p className="text-gray-400 mb-4">Expected Beta Launch: Q4 2025</p>
