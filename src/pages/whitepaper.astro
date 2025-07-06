@@ -1,0 +1,789 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="AstroLMS White Paper - Technical Overview">
+    <div class="whitepaper-container">
+        <div class="download-controls">
+            <button class="download-btn" onclick="window.print()">Print/Save as PDF</button>
+            <button class="download-btn" onclick="downloadHTML()">Download HTML</button>
+        </div>
+
+        <div class="header">
+            <div class="title">AstroLMS: A Decentralized, Modular Learning Management Platform for the Future of Work and Learning</div>
+            <div class="subtitle">Technical White Paper</div>
+            <div class="version-info">
+                Version 1.0<br>
+                June 2025
+            </div>
+        </div>
+
+        <div class="abstract">
+            <h3>Abstract</h3>
+            <p>AstroLMS represents a paradigm shift in learning management system (LMS) architecture, addressing critical limitations of legacy platforms through a modular, decentralized approach. This white paper presents a comprehensive technical overview of AstroLMS, a next-generation learning management platform that integrates artificial intelligence, blockchain technology, and modern web architecture to deliver personalized, scalable educational experiences. Built on a foundation of Next.js, Firebase, and Cloudflare infrastructure, AstroLMS provides advanced compliance tracking, real-time analytics, and Web3 capabilities while maintaining enterprise-grade security and performance standards.</p>
+        </div>
+
+        <h1>1. Introduction</h1>
+
+        <h2>1.1 Background</h2>
+        <p>The global education technology market has experienced unprecedented growth, with valuations reaching $163.49 billion in 2024 and projected compound annual growth rates of 13.3% through 2030. Despite this expansion, existing learning management systems continue to exhibit fundamental architectural limitations that impede organizational agility and learner engagement.</p>
+
+        <p>Traditional LMS platforms, designed for monolithic deployment models, struggle to accommodate the dynamic requirements of modern educational environments. These systems typically exhibit rigid course structures, limited integration capabilities, and inadequate support for emerging technologies such as artificial intelligence and blockchain-based credentials.</p>
+
+        <h2>1.2 Problem Statement</h2>
+        <p>Contemporary learning management systems face several critical challenges:</p>
+
+        <h3>Technical Limitations:</h3>
+        <ul>
+            <li>Monolithic architecture restricting scalability and customization</li>
+            <li>Inadequate support for SCORM (Sharable Content Object Reference Model) and xAPI standards</li>
+            <li>Limited integration capabilities with modern APIs and microservices</li>
+            <li>Absence of native artificial intelligence and machine learning capabilities</li>
+        </ul>
+
+        <h3>Functional Deficiencies:</h3>
+        <ul>
+            <li>Lack of micro-learning content generation and delivery mechanisms</li>
+            <li>Insufficient analytics and performance tracking capabilities</li>
+            <li>Limited badge and credential automation systems</li>
+            <li>Absence of Web3 and cryptocurrency integration</li>
+        </ul>
+
+        <h3>Economic Constraints:</h3>
+        <ul>
+            <li>High licensing costs with limited feature customization</li>
+            <li>Vendor lock-in reducing organizational flexibility</li>
+            <li>Inadequate scalability for growing user bases</li>
+        </ul>
+
+        <h2>1.3 Objectives</h2>
+        <p>This white paper aims to:</p>
+        <ol>
+            <li>Present the technical architecture and design principles of AstroLMS</li>
+            <li>Demonstrate how modular design addresses current LMS limitations</li>
+            <li>Provide detailed analysis of system capabilities and competitive advantages</li>
+            <li>Outline implementation roadmap and business model considerations</li>
+        </ol>
+
+        <h1>2. Technical Architecture</h1>
+
+        <h2>2.1 System Overview</h2>
+        <p>AstroLMS employs a distributed, microservices-based architecture that enables horizontal scaling and modular functionality deployment. The system leverages modern web technologies and cloud infrastructure to deliver high-performance, reliable educational experiences.</p>
+
+        <h2>2.2 Frontend Architecture</h2>
+        
+        <h3>Technology Stack:</h3>
+        <ul>
+            <li><strong>Next.js (App Router):</strong> React-based framework providing server-side rendering and optimal performance</li>
+            <li><strong>TypeScript:</strong> Strongly-typed programming language ensuring code reliability and maintainability</li>
+            <li><strong>Tailwind CSS:</strong> Utility-first CSS framework enabling rapid UI development</li>
+            <li><strong>React Server Components:</strong> Selective implementation for enhanced performance optimization</li>
+        </ul>
+
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Progressive Web Application (PWA) capabilities</li>
+            <li>Responsive design optimized for multi-device access</li>
+            <li>Real-time updates through WebSocket connections</li>
+            <li>Offline functionality for critical learning content</li>
+        </ul>
+
+        <h2>2.3 Backend Infrastructure</h2>
+        
+        <h3>Core Services:</h3>
+        <ul>
+            <li><strong>Next.js API Routes:</strong> RESTful API endpoints for client-server communication</li>
+            <li><strong>Firebase Authentication:</strong> Secure user authentication and authorization</li>
+            <li><strong>Firestore Database:</strong> NoSQL document database for user data and course content</li>
+            <li><strong>Cloudflare Workers:</strong> Edge computing for SCORM processing and analytics</li>
+            <li><strong>Cloudflare D1:</strong> Distributed SQL database for structured data requirements</li>
+        </ul>
+
+        <h3>Database Architecture:</h3>
+        <ul>
+            <li><strong>Development Environment:</strong> SQLite for local development and testing</li>
+            <li><strong>Production Environment:</strong> PlanetScale for scalable MySQL-compatible database services</li>
+            <li><strong>Data Synchronization:</strong> Automated backup and replication across multiple regions</li>
+        </ul>
+
+        <h2>2.4 Payment Processing</h2>
+        
+        <h3>Integrated Payment Systems:</h3>
+        <ul>
+            <li><strong>Square Subscriptions API:</strong> Traditional payment processing for subscription-based services</li>
+            <li><strong>Coinbase Wallet Integration:</strong> Cryptocurrency payment support for Web3 adoption</li>
+            <li><strong>Webhook Architecture:</strong> Real-time payment event processing for subscription management</li>
+        </ul>
+
+        <h2>2.5 Deployment Strategy</h2>
+        
+        <h3>Infrastructure Components:</h3>
+        <ul>
+            <li><strong>Cloudflare Pages:</strong> Global content delivery network for frontend distribution</li>
+            <li><strong>Vercel/Firebase Functions:</strong> Serverless computing for API endpoints</li>
+            <li><strong>Wrangler CLI:</strong> Development and production deployment management</li>
+        </ul>
+
+        <h1>3. Core Functionalities</h1>
+
+        <h2>3.1 Course Management System</h2>
+        
+        <h3>Course Builder:</h3>
+        <ul>
+            <li>SCORM-compatible content creation and delivery</li>
+            <li>Markdown-driven content authoring with AI assistance</li>
+            <li>Multimedia content integration and optimization</li>
+            <li>Version control and collaborative editing capabilities</li>
+        </ul>
+
+        <h3>Content Delivery:</h3>
+        <ul>
+            <li>Adaptive learning path generation based on user performance</li>
+            <li>Micro-learning module creation and sequencing</li>
+            <li>Mobile-optimized content rendering</li>
+            <li>Offline content synchronization</li>
+        </ul>
+
+        <h2>3.2 User Management and Access Control</h2>
+        
+        <h3>Role-Based Access Control (RBAC):</h3>
+        <ul>
+            <li>Administrator: Full system access and configuration</li>
+            <li>Editor: Content creation and course management</li>
+            <li>Viewer: Course consumption and progress tracking</li>
+            <li>Fine-grained permission system for custom role creation</li>
+        </ul>
+
+        <h3>User Analytics:</h3>
+        <ul>
+            <li>Learning progress tracking and visualization</li>
+            <li>Performance metrics and competency assessment</li>
+            <li>Engagement analytics and behavioral insights</li>
+            <li>Personalized learning recommendations</li>
+        </ul>
+
+        <h2>3.3 Communication and Collaboration</h2>
+        
+        <h3>Discussion Forums:</h3>
+        <ul>
+            <li>Threaded conversation support for course-specific discussions</li>
+            <li>Global community forums for cross-course interaction</li>
+            <li>Real-time messaging and notification systems</li>
+            <li>Moderation tools and content filtering</li>
+        </ul>
+
+        <h3>Notification System:</h3>
+        <ul>
+            <li>Push notifications for mobile applications</li>
+            <li>In-app notifications with contextual relevance</li>
+            <li>Email integration for critical updates</li>
+            <li>Customizable notification preferences</li>
+        </ul>
+
+        <h2>3.4 Artificial Intelligence Integration</h2>
+        
+        <h3>AI-Powered Learning Assistant:</h3>
+        <ul>
+            <li>Course-specific chatbot deployment</li>
+            <li>Natural language processing for student queries</li>
+            <li>Automated content generation and curation</li>
+            <li>Personalized learning path optimization</li>
+        </ul>
+
+        <h3>Machine Learning Capabilities:</h3>
+        <ul>
+            <li>Predictive analytics for student success</li>
+            <li>Content recommendation algorithms</li>
+            <li>Automated assessment and feedback generation</li>
+            <li>Performance trend analysis and early intervention</li>
+        </ul>
+
+        <h2>3.5 Credential and Badge System</h2>
+        
+        <h3>Digital Credentialing:</h3>
+        <ul>
+            <li>Blockchain-based badge verification</li>
+            <li>NFT (Non-Fungible Token) minting for achievements</li>
+            <li>Audit trail maintenance for credential integrity</li>
+            <li>Third-party credential verification APIs</li>
+        </ul>
+
+        <h3>Gamification Elements:</h3>
+        <ul>
+            <li>Progress tracking and milestone celebrations</li>
+            <li>Leaderboards and competitive learning</li>
+            <li>Achievement unlocking and reward systems</li>
+            <li>Social sharing and recognition features</li>
+        </ul>
+
+        <h2>3.6 Standards Compliance</h2>
+        
+        <h3>SCORM and xAPI Support:</h3>
+        <ul>
+            <li>Full SCORM 1.2 and 2004 compatibility</li>
+            <li>Tin Can API (xAPI) integration for advanced tracking</li>
+            <li>Learning Record Store (LRS) functionality</li>
+            <li>Comprehensive analytics and reporting</li>
+        </ul>
+
+        <h3>Accessibility Standards:</h3>
+        <ul>
+            <li>WCAG 2.1 AA compliance for inclusive design</li>
+            <li>Screen reader compatibility</li>
+            <li>Keyboard navigation support</li>
+            <li>Multi-language internationalization</li>
+        </ul>
+
+        <h1>4. Competitive Analysis</h1>
+
+        <h2>4.1 Market Positioning</h2>
+        <p>AstroLMS differentiates itself from existing solutions through comprehensive feature integration and modern architectural approaches:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Litmos</th>
+                    <th>Thinkific</th>
+                    <th>Moodle</th>
+                    <th>AstroLMS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web3 Integration</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>SCORM Compliance</td>
+                    <td class="checkmark">✅</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>AI Assistant</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>Booking System</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>NFT Badges</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>Customizable</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+                <tr>
+                    <td>Open Source</td>
+                    <td class="crossmark">❌</td>
+                    <td class="crossmark">❌</td>
+                    <td class="checkmark">✅</td>
+                    <td class="checkmark">✅</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.2 Competitive Advantages</h2>
+        
+        <h3>Technical Superiority:</h3>
+        <ul>
+            <li>Modern microservices architecture enabling rapid scaling</li>
+            <li>Native AI integration for personalized learning experiences</li>
+            <li>Blockchain technology for secure credential verification</li>
+            <li>Comprehensive API ecosystem for third-party integrations</li>
+        </ul>
+
+        <h3>Cost Efficiency:</h3>
+        <ul>
+            <li>Transparent pricing model with usage-based scaling</li>
+            <li>Reduced total cost of ownership through automation</li>
+            <li>Open-source components reducing vendor dependencies</li>
+            <li>Flexible deployment options for various organizational sizes</li>
+        </ul>
+
+        <h1>5. Implementation Roadmap</h1>
+
+        <h2>5.1 Development Phases</h2>
+
+        <div class="highlight-box">
+            <h3>Phase 1: Foundation (Completed)</h3>
+            <ul>
+                <li>User authentication and authorization systems</li>
+                <li>Basic course creation and management</li>
+                <li>SCORM compliance implementation</li>
+                <li>Digital badge system deployment</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 2: Intelligence Enhancement (In Development)</h3>
+            <ul>
+                <li>AI chatbot integration and training</li>
+                <li>Micro-learning content generation</li>
+                <li>Advanced analytics dashboard</li>
+                <li>Machine learning model deployment</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 3: Analytics and Insights (In Development)</h3>
+            <ul>
+                <li>Comprehensive dashboard development</li>
+                <li>Real-time analytics implementation</li>
+                <li>Performance monitoring and optimization</li>
+                <li>Predictive analytics integration</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 4: Booking and Scheduling (Completed)</h3>
+            <ul>
+                <li>Calendar-based scheduling system</li>
+                <li>Payment integration for scheduled sessions</li>
+                <li>Automated booking confirmations</li>
+                <li>Resource allocation optimization</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 5: Monetization Infrastructure (Completed)</h3>
+            <ul>
+                <li>Subscription billing system implementation</li>
+                <li>Cryptocurrency payment processing</li>
+                <li>Revenue analytics and reporting</li>
+                <li>Multi-tier pricing model deployment</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 6: Marketplace Development (Planned)</h3>
+            <ul>
+                <li>Public course marketplace creation</li>
+                <li>Content creator onboarding system</li>
+                <li>Revenue sharing implementation</li>
+                <li>Quality assurance and content moderation</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Phase 7: Public Launch (Planned)</h3>
+            <ul>
+                <li>Beta testing and user feedback integration</li>
+                <li>Performance optimization and scaling</li>
+                <li>Marketing and community building</li>
+                <li>Strategic partnership development</li>
+            </ul>
+        </div>
+
+        <h2>5.2 Success Metrics</h2>
+        
+        <h3>Technical Metrics:</h3>
+        <ul>
+            <li>System uptime and reliability (99.9% target)</li>
+            <li>Page load performance (sub-2 second target)</li>
+            <li>API response times (sub-100ms target)</li>
+            <li>User engagement rates (40% improvement target)</li>
+        </ul>
+
+        <h3>Business Metrics:</h3>
+        <ul>
+            <li>User acquisition and retention rates</li>
+            <li>Revenue growth and profitability</li>
+            <li>Customer satisfaction scores</li>
+            <li>Market share expansion</li>
+        </ul>
+
+        <h1>6. Target Market Analysis</h1>
+
+        <h2>6.1 Primary Market Segments</h2>
+        
+        <h3>Enterprise Organizations:</h3>
+        <ul>
+            <li>Internal compliance training requirements</li>
+            <li>Employee skill development programs</li>
+            <li>Onboarding and orientation processes</li>
+            <li>Regulatory training and certification</li>
+        </ul>
+
+        <h3>Educational Institutions:</h3>
+        <ul>
+            <li>Online course delivery and management</li>
+            <li>Blended learning implementations</li>
+            <li>Student progress tracking and analytics</li>
+            <li>Continuing education programs</li>
+        </ul>
+
+        <h3>Independent Educators:</h3>
+        <ul>
+            <li>Course monetization and delivery</li>
+            <li>Student engagement and retention</li>
+            <li>Automated assessment and feedback</li>
+            <li>Community building and networking</li>
+        </ul>
+
+        <h3>Blockchain Communities:</h3>
+        <ul>
+            <li>Decentralized education initiatives</li>
+            <li>Cryptocurrency-based learning rewards</li>
+            <li>NFT credential systems</li>
+            <li>DAO (Decentralized Autonomous Organization) training programs</li>
+        </ul>
+
+        <h2>6.2 Market Sizing and Opportunity</h2>
+        <p>The addressable market for AstroLMS encompasses multiple segments within the broader education technology ecosystem:</p>
+        <ul>
+            <li><strong>Corporate Training Market:</strong> $366.02 billion (2023)</li>
+            <li><strong>Online Education Market:</strong> $350 billion (2025 projection)</li>
+            <li><strong>Blockchain in Education Market:</strong> $25 billion (2030 projection)</li>
+        </ul>
+
+        <h1>7. Business Model and Pricing Strategy</h1>
+
+        <h2>7.1 Revenue Streams</h2>
+        
+        <h3>Subscription-Based Services:</h3>
+        <ul>
+            <li><strong>Core Plan ($19/month):</strong> Essential course building and basic SCORM support</li>
+            <li><strong>Professional Plan ($49/month):</strong> Advanced analytics, AI assistance, and badge systems</li>
+            <li><strong>Enterprise Plan ($99+/month):</strong> Web3 integration, custom development, and dedicated support</li>
+        </ul>
+
+        <h3>Value-Added Services:</h3>
+        <ul>
+            <li>Custom course development and migration</li>
+            <li>White-label implementation and branding</li>
+            <li>Integration consulting and technical support</li>
+            <li>Training and certification programs</li>
+        </ul>
+
+        <h3>Marketplace Revenue:</h3>
+        <ul>
+            <li>Transaction fees on public course enrollments</li>
+            <li>Premium listing and promotion services</li>
+            <li>Certification and accreditation partnerships</li>
+            <li>Affiliate marketing and referral programs</li>
+        </ul>
+
+        <h2>7.2 Pricing Philosophy</h2>
+        <p>AstroLMS employs a value-based pricing model that scales with organizational needs and usage patterns. The pricing strategy emphasizes:</p>
+        <ul>
+            <li><strong>Accessibility:</strong> Entry-level pricing for small organizations and individual educators</li>
+            <li><strong>Scalability:</strong> Usage-based pricing that grows with organizational success</li>
+            <li><strong>Flexibility:</strong> Multiple payment options including traditional and cryptocurrency methods</li>
+            <li><strong>Transparency:</strong> Clear pricing structure without hidden fees or vendor lock-in</li>
+        </ul>
+
+        <h1>8. Security and Compliance</h1>
+
+        <h2>8.1 Data Protection and Privacy</h2>
+        
+        <h3>Security Measures:</h3>
+        <ul>
+            <li>End-to-end encryption for all data transmission</li>
+            <li>SOC 2 Type II compliance for data handling</li>
+            <li>GDPR and CCPA compliance for privacy protection</li>
+            <li>Regular security audits and penetration testing</li>
+        </ul>
+
+        <h3>Access Control:</h3>
+        <ul>
+            <li>Multi-factor authentication for all user accounts</li>
+            <li>Role-based access control with principle of least privilege</li>
+            <li>Session management and automatic timeout</li>
+            <li>Audit logging for all system activities</li>
+        </ul>
+
+        <h2>8.2 Compliance Standards</h2>
+        
+        <h3>Educational Standards:</h3>
+        <ul>
+            <li>FERPA compliance for student data protection</li>
+            <li>COPPA compliance for users under 13</li>
+            <li>Section 508 accessibility requirements</li>
+            <li>International accessibility standards (WCAG 2.1)</li>
+        </ul>
+
+        <h3>Industry Standards:</h3>
+        <ul>
+            <li>ISO 27001 information security management</li>
+            <li>SCORM 1.2 and 2004 compliance</li>
+            <li>xAPI (Tin Can API) specification adherence</li>
+            <li>QTI (Question and Test Interoperability) support</li>
+        </ul>
+
+        <h1>9. Future Considerations and Scalability</h1>
+
+        <h2>9.1 Technological Evolution</h2>
+        
+        <h3>Emerging Technologies:</h3>
+        <ul>
+            <li>Integration with virtual and augmented reality platforms</li>
+            <li>Advanced natural language processing for multilingual support</li>
+            <li>Blockchain-based decentralized identity management</li>
+            <li>Internet of Things (IoT) integration for contextual learning</li>
+        </ul>
+
+        <h3>Scalability Planning:</h3>
+        <ul>
+            <li>Horizontal scaling through microservices architecture</li>
+            <li>Global content delivery network expansion</li>
+            <li>Edge computing deployment for reduced latency</li>
+            <li>Automated load balancing and resource optimization</li>
+        </ul>
+
+        <h2>9.2 Market Expansion</h2>
+        
+        <h3>Geographic Expansion:</h3>
+        <ul>
+            <li>Localization for international markets</li>
+            <li>Compliance with regional educational standards</li>
+            <li>Cultural adaptation of learning methodologies</li>
+            <li>Strategic partnerships with local educational providers</li>
+        </ul>
+
+        <h3>Vertical Market Penetration:</h3>
+        <ul>
+            <li>Healthcare and medical education specialization</li>
+            <li>Financial services compliance training</li>
+            <li>Manufacturing and industrial training programs</li>
+            <li>Government and public sector implementations</li>
+        </ul>
+
+        <h1>10. Conclusion</h1>
+
+        <p>AstroLMS represents a comprehensive solution to the limitations of traditional learning management systems through innovative architecture, modern technology integration, and user-centric design principles. The platform's modular approach enables organizations to customize their learning environments while maintaining enterprise-grade security and performance standards.</p>
+
+        <p>The integration of artificial intelligence, blockchain technology, and modern web architecture positions AstroLMS as a forward-thinking solution capable of adapting to evolving educational needs. The platform's emphasis on accessibility, scalability, and cost-effectiveness makes it suitable for organizations of all sizes, from individual educators to large enterprises.</p>
+
+        <p>As the education technology market continues to expand and evolve, AstroLMS is positioned to capture significant market share through its differentiated feature set, competitive pricing, and commitment to innovation. The platform's roadmap demonstrates a clear path toward market leadership while maintaining focus on user experience and educational effectiveness.</p>
+
+        <p>The future of learning management lies in platforms that can seamlessly integrate traditional educational methodologies with emerging technologies. AstroLMS embodies this vision, providing a robust foundation for the next generation of educational experiences.</p>
+
+        <div class="footer">
+            <h3>References and Additional Information</h3>
+            <p>For more information about AstroLMS, technical documentation, or partnership opportunities, please visit <a href="https://astrolms.com" target="_blank">astrolms.com</a> or contact our development team.</p>
+            
+            <p><strong>Document Information:</strong></p>
+            <ul style="list-style: none; padding: 0;">
+                <li>Version: 1.0</li>
+                <li>Last Updated: June 2025</li>
+                <li>Authors: AstroLMS Development Team</li>
+                <li>Classification: Public</li>
+            </ul>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .whitepaper-container {
+        font-family: 'Georgia', serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        color: #333;
+        background: #fff;
+        min-height: 100vh;
+    }
+    
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 20px;
+    }
+    
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #1e40af;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        color: #6b7280;
+        margin-bottom: 20px;
+    }
+    
+    .version-info {
+        font-style: italic;
+        color: #9ca3af;
+        font-size: 14px;
+    }
+    
+    .whitepaper-container h1 {
+        color: #1e40af;
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 5px;
+    }
+    
+    .whitepaper-container h2 {
+        color: #1e40af;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+    }
+    
+    .whitepaper-container h3 {
+        color: #374151;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .abstract {
+        background: #f8fafc;
+        padding: 20px;
+        border-left: 4px solid #2563eb;
+        margin: 30px 0;
+        font-style: italic;
+    }
+    
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        border: 1px solid #d1d5db;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    
+    .comparison-table th {
+        background: #f3f4f6;
+        font-weight: bold;
+    }
+    
+    .checkmark {
+        color: #10b981;
+        font-weight: bold;
+    }
+    
+    .crossmark {
+        color: #ef4444;
+        font-weight: bold;
+    }
+    
+    .whitepaper-container ul {
+        margin: 15px 0;
+        padding-left: 30px;
+    }
+    
+    .whitepaper-container li {
+        margin-bottom: 8px;
+    }
+    
+    .highlight-box {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    
+    .footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e7eb;
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+    }
+    
+    .download-controls {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .download-btn {
+        background: #2563eb;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .download-btn:hover {
+        background: #1d4ed8;
+    }
+    
+    @media print {
+        .whitepaper-container { 
+            font-size: 12px; 
+            line-height: 1.4;
+        }
+        .download-controls { 
+            display: none; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .whitepaper-container {
+            padding: 20px 10px;
+        }
+        
+        .title {
+            font-size: 22px;
+        }
+        
+        .whitepaper-container h1 {
+            font-size: 20px;
+        }
+        
+        .whitepaper-container h2 {
+            font-size: 18px;
+        }
+        
+        .comparison-table {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<script>
+    function downloadHTML() {
+        const element = document.documentElement;
+        const html = element.outerHTML;
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'AstroLMS-WhitePaper-v1.0.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+</script>

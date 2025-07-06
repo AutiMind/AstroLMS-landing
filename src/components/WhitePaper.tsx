@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Download, Network, Blocks, Rocket, CheckCircle, Mail } from 'lucide-react';
-import { toast } from 'react-hot-toast';
+import { FileText, Download, Network, Blocks, Rocket, CheckCircle } from 'lucide-react';
 
 const WhitePaper = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const keyConcepts = [
     {
@@ -28,25 +24,8 @@ const WhitePaper = () => {
     }
   ];
 
-  const handleDownload = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) {
-      toast.error('Please enter your email address');
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simulate API call for email capture
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      toast.success('White paper download link sent to your email!');
-      setEmail('');
-    } catch (error) {
-      toast.error('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleViewWhitePaper = () => {
+    window.open('/whitepaper', '_blank');
   };
 
   return (
@@ -189,17 +168,17 @@ const WhitePaper = () => {
                 </motion.div>
                 
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Get the Complete White Paper
+                  Read the Complete White Paper
                 </h3>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-                  Download our comprehensive 40-page analysis of the future of learning management systems, 
-                  including technical architecture, market analysis, and implementation roadmap.
+                  Explore our comprehensive technical analysis of the future of learning management systems, 
+                  including architecture, market analysis, and implementation roadmap.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-8">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-green-400" />
-                    <span>40 pages of insights</span>
+                    <span>Comprehensive insights</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-green-400" />
@@ -216,40 +195,19 @@ const WhitePaper = () => {
                 </div>
               </div>
 
-              <form onSubmit={handleDownload} className="max-w-md mx-auto">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="relative flex-1">
-                    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email address"
-                      className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
-                      required
-                    />
+              <div className="flex justify-center">
+                <motion.button
+                  onClick={handleViewWhitePaper}
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-12 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 text-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <div className="flex items-center space-x-2">
+                    <FileText className="h-5 w-5" />
+                    <span>Read White Paper</span>
                   </div>
-                  <motion.button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center space-x-2">
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        <span>Sending...</span>
-                      </div>
-                    ) : (
-                      'Download Now'
-                    )}
-                  </motion.button>
-                </div>
-                <p className="text-xs text-gray-500 text-center mt-4">
-                  By downloading, you agree to receive updates about AstroLMS. Unsubscribe anytime.
-                </p>
-              </form>
+                </motion.button>
+              </div>
             </div>
           </div>
         </motion.div>
