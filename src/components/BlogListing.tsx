@@ -8,7 +8,7 @@ const BlogListing = () => {
       title: "Welcome to AstroLMS: Where Learning Meets Innovation",
       excerpt: "Discover how AstroLMS is revolutionizing the learning management landscape with AI-powered personalization, cutting-edge technology, and a vision for the future of education.",
       author: "Amy Cozart-Lundin",
-      date: "2024-12-29",
+      date: "2025-07-01",
       readTime: "5 min read",
       category: "Company News",
       slug: "welcome-to-astrolms",

@@ -113,12 +113,12 @@ const BlogPost = ({ post }: BlogPostProps) => {
           <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50"></div>
           <div className="relative p-8 lg:p-12">
             <div 
-              className="prose prose-lg prose-invert prose-blue max-w-none"
+              className="prose prose-lg prose-invert prose-blue max-w-none [&_*]:text-gray-300 [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white [&_h5]:text-white [&_h6]:text-white [&_strong]:text-white [&_b]:text-white [&_a]:text-blue-400 [&_a:hover]:text-blue-300 [&_.lead]:text-gray-200 [&_.lead]:text-xl [&_.lead]:font-medium [&_.lead]:mb-8 [&_.cta-section]:mt-8 [&_.cta-section]:p-6 [&_.cta-section]:bg-blue-900/20 [&_.cta-section]:border [&_.cta-section]:border-blue-500/30 [&_.cta-section]:rounded-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
               style={{
                 '--tw-prose-body': 'rgb(209 213 219)',
                 '--tw-prose-headings': 'rgb(255 255 255)',
-                '--tw-prose-lead': 'rgb(156 163 175)',
+                '--tw-prose-lead': 'rgb(229 231 235)',
                 '--tw-prose-links': 'rgb(96 165 250)',
                 '--tw-prose-bold': 'rgb(255 255 255)',
                 '--tw-prose-counters': 'rgb(156 163 175)',
