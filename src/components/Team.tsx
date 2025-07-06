@@ -11,7 +11,7 @@ const Team = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/amycozartlundin/',
         website: 'https://amylundin.me',
-        email: 'amy@autimind.com',
+        email: 'info@astrolms.com',
         github: 'https://github.com/grammar-nerd'
       }
     },

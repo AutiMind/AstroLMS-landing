@@ -35,18 +35,17 @@ Message:
 ${formData.message}
       `.trim();
 
-      // Create mailto links for both Amy and Andrea
-      const amyEmail = 'amy@autimind.com';
-      const andreaEmail = 'andrea@autimind.com';
+      // Create mailto link to info email
+      const infoEmail = 'info@astrolms.com';
       
-      // Create a combined mailto link with both recipients
-      const mailtoLink = `mailto:${amyEmail},${andreaEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      // Create a mailto link to the info email
+      const mailtoLink = `mailto:${infoEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
       
       // Open the user's default email client
       window.location.href = mailtoLink;
       
       setTimeout(() => {
-        toast.success('Email client opened! Your message has been prepared for both Amy and Andrea.');
+        toast.success('Email client opened! Your message has been prepared and will be forwarded to our team.');
         setFormData({ name: '', email: '', company: '', message: '' });
         setIsSubmitting(false);
         onClose();
@@ -192,7 +191,7 @@ ${formData.message}
         </form>
 
         <p className="text-xs text-gray-400 mt-4 text-center">
-          Your message will be sent to both Amy and Andrea. We'll get back to you within 24 hours.
+          Your message will be forwarded to our team. We'll get back to you within 24 hours.
         </p>
       </motion.div>
     </div>
