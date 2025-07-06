@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 
+// Slide data for pitch deck
 const slides = [
   {
     id: 'hero',
@@ -916,6 +917,7 @@ const slides = [
   
   <script>
     // Initialize AOS animations
+    // @ts-ignore
     AOS.init({
       duration: 1000,
       once: true,
@@ -923,12 +925,12 @@ const slides = [
     });
 
     // Animated counter function
-    function animateCounter(element) {
+    function animateCounter(element: any) {
       const target = parseInt(element.getAttribute('data-target'));
       const duration = 2000;
       const start = performance.now();
       
-      function updateCounter(currentTime) {
+      function updateCounter(currentTime: any) {
         const elapsed = currentTime - start;
         const progress = Math.min(elapsed / duration, 1);
         const current = Math.floor(progress * target);
@@ -960,9 +962,10 @@ const slides = [
 
     // Revenue Chart
     function createRevenueChart() {
-      const ctx = document.getElementById('revenueChart');
+      const ctx = document.getElementById('revenueChart') as HTMLCanvasElement;
       if (!ctx) return;
       
+      // @ts-ignore - Chart.js types not available
       new Chart(ctx, {
         type: 'line',
         data: {
@@ -997,7 +1000,7 @@ const slides = [
               },
               ticks: {
                 color: '#ffffff',
-                callback: function(value) {
+                callback: function(value: any) {
                   return '$' + value + 'M';
                 }
               }
@@ -1022,7 +1025,8 @@ const slides = [
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+        const target = document.querySelector(href as string);
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
@@ -1034,18 +1038,20 @@ const slides = [
 
     // Add scroll-based navbar background
     window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 100) {
-        nav.style.background = 'rgba(17, 24, 39, 0.95)';
-      } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.1)';
+      const nav = document.querySelector('nav') as HTMLElement;
+      if (nav) {
+        if (window.scrollY > 100) {
+          nav.style.background = 'rgba(17, 24, 39, 0.95)';
+        } else {
+          nav.style.background = 'rgba(255, 255, 255, 0.1)';
+        }
       }
     });
 
     // Parallax effect for hero section
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      const parallax = document.querySelector('#hero');
+      const parallax = document.querySelector('#hero') as HTMLElement;
       if (parallax) {
         const speed = scrolled * 0.5;
         parallax.style.transform = `translateY(${speed}px)`;
@@ -1054,12 +1060,13 @@ const slides = [
 
     // Interactive hover effects for NFT cards
     document.querySelectorAll('.nft-card').forEach(card => {
+      const cardElement = card as HTMLElement;
       card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
+        cardElement.style.transform = 'translateY(-10px) scale(1.02)';
       });
       
       card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
+        cardElement.style.transform = 'translateY(0) scale(1)';
       });
     });
   </script>
