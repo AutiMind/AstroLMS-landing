@@ -21,8 +21,9 @@ const Header = () => {
 
   const navItems = [
     { name: 'Features', href: '#features' },
-    { name: 'Pitch Deck', href: '/pitch-deck' },
+    { name: 'Pitch Deck', href: 'https://pitch.astrolms.com' },
     { name: 'Investors', href: '#investors' },
+    { name: 'Roadmap', href: '#roadmap' },
     { name: 'Team', href: '#team' },
     { name: 'About', href: '/about' },
   ];
