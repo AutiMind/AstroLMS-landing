@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Target, Rocket, Users, Brain, Shield, Globe } from 'lucide-react';
+import { CheckCircle, Clock, Target, Rocket, Globe } from 'lucide-react';
 
 const Roadmap = () => {
   const roadmapPhases = [
@@ -11,7 +11,7 @@ const Roadmap = () => {
       milestones: [
         { title: 'Landing Page & Brand Identity', completed: true },
         { title: 'Investor Pitch Deck', completed: true },
-        { title: 'Team Assembly', completed: true },
+        { title: 'Team Assembly', completed: false },
         { title: 'Market Research & Analysis', completed: true },
         { title: 'Technical Architecture Planning', completed: true }
       ],
@@ -27,8 +27,8 @@ const Roadmap = () => {
         { title: 'User Authentication & Management', completed: true },
         { title: 'Course Creation Framework', completed: true },
         { title: 'AI Learning Analytics Engine', completed: false },
-        { title: 'Interactive Content Builder', completed: false },
-        { title: 'Mobile-First Responsive Design', completed: false }
+        { title: 'Interactive Content Builder', completed: true },
+        { title: 'Mobile-First Responsive Design', completed: true }
       ],
       color: 'from-blue-500 to-cyan-500',
       icon: Clock
@@ -40,8 +40,8 @@ const Roadmap = () => {
       description: 'Beta testing with select educational institutions',
       milestones: [
         { title: 'Beta User Onboarding System', completed: false },
-        { title: 'AI-Powered Personalization', completed: false },
-        { title: 'Advanced Analytics Dashboard', completed: false },
+        { title: 'AI-Powered Personalization', completed: true },
+        { title: 'Advanced Analytics Dashboard', completed: true },
         { title: 'Integration with Popular LTI Tools', completed: false },
         { title: 'Performance Optimization', completed: false }
       ],
