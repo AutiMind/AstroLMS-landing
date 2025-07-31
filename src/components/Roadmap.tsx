@@ -4,79 +4,64 @@ import { CheckCircle, Clock, Target, Rocket, Globe } from 'lucide-react';
 const Roadmap = () => {
   const roadmapPhases = [
     {
-      phase: 'Phase 1: Foundation',
-      timeline: 'Q1 2024 - Q2 2024',
+      phase: 'Phase 1: Foundation & Core Features',
+      timeline: 'Q1 2025',
       status: 'completed',
-      description: 'Core platform architecture and initial development',
+      description: 'Multi-tenant architecture, authentication, and database infrastructure',
       milestones: [
-        { title: 'Landing Page & Brand Identity', completed: true },
-        { title: 'Investor Pitch Deck', completed: true },
-        { title: 'Team Assembly', completed: false },
-        { title: 'Market Research & Analysis', completed: true },
-        { title: 'Technical Architecture Planning', completed: true }
+        { title: 'Multi-provider authentication (Email, OAuth, Web3)', completed: true },
+        { title: 'Multi-database design with Cloudflare D1', completed: true },
+        { title: 'End-to-end encryption and HIPAA compliance', completed: true },
+        { title: 'Role-based access control', completed: true },
+        { title: 'Core course management system', completed: true }
       ],
       color: 'from-green-500 to-emerald-500',
       icon: CheckCircle
     },
     {
-      phase: 'Phase 2: Platform Development',
-      timeline: 'Q3 2024 - Q2 2025',
-      status: 'in-progress',
-      description: 'Core LMS features and AI integration development',
+      phase: 'Phase 2: AI-Powered Learning & Analytics',
+      timeline: 'Q2 2025',
+      status: 'completed',
+      description: 'Advanced AI features and comprehensive analytics system',
       milestones: [
-        { title: 'User Authentication & Management', completed: true },
-        { title: 'Course Creation Framework', completed: true },
-        { title: 'AI Learning Analytics Engine', completed: false },
-        { title: 'Interactive Content Builder', completed: true },
-        { title: 'Mobile-First Responsive Design', completed: true }
+        { title: 'AI content creation and lesson scaffolding', completed: true },
+        { title: 'Learning disability detection system', completed: true },
+        { title: 'Adaptive learning engine with ML models', completed: true },
+        { title: 'Automated ML training and model versioning', completed: true },
+        { title: 'Comprehensive analytics and reporting', completed: true }
+      ],
+      color: 'from-green-500 to-emerald-500',
+      icon: CheckCircle
+    },
+    {
+      phase: 'Phase 3: Enterprise Features & Scaling',
+      timeline: 'Q3 2025',
+      status: 'in-progress',
+      description: 'Production-ready features and enterprise capabilities',
+      milestones: [
+        { title: 'SCORM compliance and content packaging', completed: true },
+        { title: 'Advanced admin dashboards and management tools', completed: true },
+        { title: 'Real-time collaboration and discussion forums', completed: false },
+        { title: 'Mobile optimization and progressive web app', completed: true },
+        { title: 'API documentation and developer tools', completed: false }
       ],
       color: 'from-blue-500 to-cyan-500',
       icon: Clock
     },
     {
-      phase: 'Phase 3: Beta Launch',
-      timeline: 'Q3 2025 - Q4 2025',
-      status: 'upcoming',
-      description: 'Beta testing with select educational institutions',
+      phase: 'Phase 4: Global Expansion & Innovation',
+      timeline: 'Q4 2025',
+      status: 'planned',
+      description: 'Cutting-edge features and worldwide accessibility',
       milestones: [
-        { title: 'Beta User Onboarding System', completed: false },
-        { title: 'AI-Powered Personalization', completed: true },
-        { title: 'Advanced Analytics Dashboard', completed: true },
-        { title: 'Integration with Popular LTI Tools', completed: false },
-        { title: 'Performance Optimization', completed: false }
+        { title: 'Multi-language support and localization', completed: false },
+        { title: 'Advanced VR/AR learning experiences', completed: false },
+        { title: 'Blockchain-based credential verification', completed: false },
+        { title: 'Global content marketplace', completed: false },
+        { title: 'AI-powered tutoring and mentorship', completed: false }
       ],
       color: 'from-purple-500 to-pink-500',
       icon: Target
-    },
-    {
-      phase: 'Phase 4: Market Launch',
-      timeline: 'Q1 2026 - Q2 2026',
-      status: 'planned',
-      description: 'Public launch and customer acquisition',
-      milestones: [
-        { title: 'Production Infrastructure Scaling', completed: false },
-        { title: 'Enterprise Customer Onboarding', completed: false },
-        { title: 'Advanced AI Features', completed: false },
-        { title: 'Multi-Language Support', completed: false },
-        { title: 'API Ecosystem Launch', completed: false }
-      ],
-      color: 'from-orange-500 to-red-500',
-      icon: Rocket
-    },
-    {
-      phase: 'Phase 5: Scale & Expansion',
-      timeline: 'Q3 2026+',
-      status: 'future',
-      description: 'Global expansion and advanced features',
-      milestones: [
-        { title: 'International Market Expansion', completed: false },
-        { title: 'Advanced AI Tutoring System', completed: false },
-        { title: 'VR/AR Learning Integration', completed: false },
-        { title: 'Blockchain Credentialing', completed: false },
-        { title: 'Enterprise White-Label Solutions', completed: false }
-      ],
-      color: 'from-violet-500 to-purple-500',
-      icon: Globe
     }
   ];
 
